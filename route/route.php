@@ -20,8 +20,8 @@
 //];
 
 //Module mine
-Route::get(':one/:two', 'mine/Ctrl/act')
-    ->pattern(['one' => '\d+']);//变量检测
+//Route::get(':one/:two', 'mine/Ctrl/act')
+//    ->pattern(['one' => '\d+']);//变量检测
 
 //Route::get('/:one/:two', 'mine/Ctrl/act')
 //    ->ext('html');
