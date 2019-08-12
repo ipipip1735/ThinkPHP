@@ -145,29 +145,29 @@ class Ctrl extends Controller
     {
         //add
         $data = [
-//            'person_name' => 'jack' . time(),
-            'person_name' => ['one'=>111, 'two'=>222],
+            'person_name' => 'jack' . time(),
+//            'person_name' => ['one'=>111, 'two'=>222],
             'person_age' => rand(0, 120),
             'person_sex' => false,
         ];
 
         //方式一
-//        $person = new Person($data);
-//        $person->save();
+        $person = new Person($data);
+        $person->save();
 
         //方式二
-        $person = new Person;
-//        $person->person_name=[
-//            'one'=>111,
-//            'two'=>222,
-//        ];
-        $person->save($data);
+//        $person = new Person;
+////        $person->person_name=[
+////            'one'=>111,
+////            'two'=>222,
+////        ];
+//        $person->save($data);
 
 
         //query
 //        $person = Person::get(1);//取出主键为1的数据
 //        $person = Person::where('person_age', 84)->find();
-//        var_dump($person);
+//        var_dump($person->person_name->one);
 
         //update
 //        $person = Person::get(1);//取出主键为1的数据

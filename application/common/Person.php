@@ -16,7 +16,10 @@ class Person extends Model
 {
     protected $pk = 'person_id';
     protected $json = ['person_name'];
-    protected $field = ['person_id', 'person_name', 'person_sex', 'person_age'];
+    protected $field = ['person_id', 'person_name', 'person_sex', 'person_age', 'person_ct'];
+//    protected $autoWriteTimestamp = 'timestamp';
+//    protected $createTime = 'person_ct';
+//    protected $updateTime = null;
 
     protected static function init()
     {
