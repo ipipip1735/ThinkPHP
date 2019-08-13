@@ -15,7 +15,7 @@ use think\Model;
 class Person extends Model
 {
     protected $pk = 'person_id';
-    protected $json = ['person_name'];
+//    protected $json = ['person_name'];
     protected $field = ['person_id', 'person_name', 'person_sex', 'person_age'];
 
     protected static function init()

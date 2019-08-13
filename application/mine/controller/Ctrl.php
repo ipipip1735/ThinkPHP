@@ -9,14 +9,37 @@
 namespace app\mine\controller;
 
 use app\common\Person;
+use app\common\Cter;
 use app\mine\UserValidate;
 use think\Controller;
 use think\Db;
 use think\facade\Log;
+use think\Request;
 use think\facade\Session;
 
 class Ctrl extends Controller
 {
+    protected $person;
+
+    /**
+     * Ctrl constructor.
+     */
+//    public function __construct()
+//    {
+////        var_dump($person);
+//    }
+//    public function __construct(Cter $cter, Request $request)
+//    {
+//        var_dump($cter);//依赖注入普通对象
+//        var_dump($request->param('one'));
+//        var_dump($request->get());
+//    }
+
+    public function __construct(Person $person)
+    {
+        var_dump($person);
+    }
+
     public function go()
     {
         return 'go';
@@ -144,24 +167,24 @@ class Ctrl extends Controller
     public function model()
     {
         //add
-        $data = [
+//        $data = [
 //            'person_name' => 'jack' . time(),
-            'person_name' => ['one'=>111, 'two'=>222],
-            'person_age' => rand(0, 120),
-            'person_sex' => false,
-        ];
+////            'person_name' => ['one'=>111, 'two'=>222],
+//            'person_age' => rand(0, 120),
+//            'person_sex' => false,
+//        ];
 
         //方式一
 //        $person = new Person($data);
 //        $person->save();
 
         //方式二
-        $person = new Person;
+//        $person = new Person;
 //        $person->person_name=[
 //            'one'=>111,
 //            'two'=>222,
 //        ];
-        $person->save($data);
+//        $person->save($data);
 
 
         //query
@@ -177,5 +200,11 @@ class Ctrl extends Controller
 
     }
 
+
+    public function party(){
+
+        $third = new \mine\Third();
+        echo 'party';
+    }
 
 }

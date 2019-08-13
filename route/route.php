@@ -38,4 +38,10 @@
 
 Route::get(':act', 'mine/Ctrl/:act');
 
+//Route::get(':act/:person_id/:person_name', 'mine/Ctrl/:act')
+//    ->model('person_id&person_name', 'app\common\Person')
+//    ->validate([
+//        'person_sex' => 'max:3'
+//    ]);
+
 
