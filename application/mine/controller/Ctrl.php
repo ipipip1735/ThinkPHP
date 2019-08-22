@@ -35,10 +35,10 @@ class Ctrl extends Controller
 //        var_dump($request->get());
 //    }
 
-    public function __construct(Person $person)
-    {
-        var_dump($person);
-    }
+//    public function __initialize(Person $person)
+//    {
+////        var_dump($person);
+//    }
 
     public function go()
     {
@@ -116,10 +116,10 @@ class Ctrl extends Controller
     public function view()
     {
         $this->assign('name', "nnnnnnnn");
-        return $this->fetch('inc');//模板包含
+//        return $this->fetch('inc');//模板包含
 //        return $this->fetch('sub');//模板继承
 //        return $this->fetch('content');//模板布局
-//        return $this->fetch('view');//当前控制器视图
+        return $this->fetch('view');//当前控制器视图
 //        return $this->fetch('ctrl/view');//当前模块下ctrl控制器的view视图
 //        return $this->fetch('ck/view');//当前模块/ck目录下的view视图
 //        return $this->fetch('index@index/view');//index模块下index控制器的view视图
